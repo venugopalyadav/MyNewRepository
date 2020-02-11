@@ -1,16 +1,14 @@
-import java.util.Scanner;
-
 public class Account {
 	static long x=101;
         long accNum ;
 	double balance;
-	PersonAcc p;
+	//PersonAcc p;
 	
-	public Account(long accNum, double balance, PersonAcc p) {
+	public Account(long accNum, double balance) {
 		this.accNum = accNum;
 		this.balance = balance;
-		this.p = p;
-		x++;
+		//this.p = p;
+		//x++;
 	}
 	public long getAccNum() {
 		return accNum;
@@ -37,15 +35,14 @@ public class Account {
 	
 	@Override
 	public String toString() {
-		return "Account p=" + p.getName() + ", AccNum=" + getAccNum() + ", Balance=" + getBalance() ;
+		return " AccNum=" + getAccNum() + ", Balance=" + getBalance() ;
 	}
 	public static void main(String args[])
 	{
 		
-		PersonAcc p1 = new PersonAcc("Smith");
-		Account a1 = new Account(x,2000,p1);
+		Account a1 = new Account(x,2000);
 		a1.deposit(2000);
 		System.out.println(a1.toString());
-		sc.close();
+		//sc.close();
 	}
 }
